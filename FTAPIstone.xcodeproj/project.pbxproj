@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD961BAB3E28009E4795 /* AppDelegate.swift */; };
+		1464DD991BAB3E28009E4795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD981BAB3E28009E4795 /* ViewController.swift */; };
+		1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9A1BAB3E28009E4795 /* Main.storyboard */; };
+		1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9D1BAB3E28009E4795 /* Assets.xcassets */; };
+		1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */; };
+		1464DDAC1BAB3E28009E4795 /* FTAPIstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */; };
+		1464DDB71BAB3E28009E4795 /* FTAPIstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */; };
+		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; settings = {ASSET_TAGS = (); }; };
+		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
+		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; settings = {ASSET_TAGS = (); }; };
+		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1464DDA81BAB3E28009E4795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1464DD8B1BAB3E28009E4795 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1464DD921BAB3E28009E4795;
+			remoteInfo = FTAPIstone;
+		};
+		1464DDB31BAB3E28009E4795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1464DD8B1BAB3E28009E4795 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1464DD921BAB3E28009E4795;
+			remoteInfo = FTAPIstone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1464DD931BAB3E28009E4795 /* FTAPIstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTAPIstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464DD961BAB3E28009E4795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1464DD981BAB3E28009E4795 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1464DD9B1BAB3E28009E4795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1464DD9D1BAB3E28009E4795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1464DDA01BAB3E28009E4795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1464DDA21BAB3E28009E4795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1464DDA71BAB3E28009E4795 /* FTAPIstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAPIstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAPIstoneTests.swift; sourceTree = "<group>"; };
+		1464DDAD1BAB3E28009E4795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1464DDB21BAB3E28009E4795 /* FTAPIstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAPIstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAPIstoneUITests.swift; sourceTree = "<group>"; };
+		1464DDB81BAB3E28009E4795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1464DDC41BAB3E43009E4795 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1464DDC61BAB3E51009E4795 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1464DDC81BAB40BD009E4795 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1464DDCA1BAB417D009E4795 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1464DD901BAB3E28009E4795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDA41BAB3E28009E4795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDAF1BAB3E28009E4795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1464DD8A1BAB3E28009E4795 = {
+			isa = PBXGroup;
+			children = (
+				1464DD951BAB3E28009E4795 /* FTAPIstone */,
+				1464DDAA1BAB3E28009E4795 /* FTAPIstoneTests */,
+				1464DDB51BAB3E28009E4795 /* FTAPIstoneUITests */,
+				1464DD941BAB3E28009E4795 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1464DD941BAB3E28009E4795 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1464DD931BAB3E28009E4795 /* FTAPIstone.app */,
+				1464DDA71BAB3E28009E4795 /* FTAPIstoneTests.xctest */,
+				1464DDB21BAB3E28009E4795 /* FTAPIstoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1464DD951BAB3E28009E4795 /* FTAPIstone */ = {
+			isa = PBXGroup;
+			children = (
+				1464DD961BAB3E28009E4795 /* AppDelegate.swift */,
+				1464DD981BAB3E28009E4795 /* ViewController.swift */,
+				1464DDCA1BAB417D009E4795 /* Deck.swift */,
+				1464DDC81BAB40BD009E4795 /* Game.swift */,
+				1464DDC41BAB3E43009E4795 /* Player.swift */,
+				1464DDC61BAB3E51009E4795 /* Card.swift */,
+				1464DD9A1BAB3E28009E4795 /* Main.storyboard */,
+				1464DD9D1BAB3E28009E4795 /* Assets.xcassets */,
+				1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */,
+				1464DDA21BAB3E28009E4795 /* Info.plist */,
+			);
+			path = FTAPIstone;
+			sourceTree = "<group>";
+		};
+		1464DDAA1BAB3E28009E4795 /* FTAPIstoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */,
+				1464DDAD1BAB3E28009E4795 /* Info.plist */,
+			);
+			path = FTAPIstoneTests;
+			sourceTree = "<group>";
+		};
+		1464DDB51BAB3E28009E4795 /* FTAPIstoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */,
+				1464DDB81BAB3E28009E4795 /* Info.plist */,
+			);
+			path = FTAPIstoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1464DD921BAB3E28009E4795 /* FTAPIstone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464DDBB1BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstone" */;
+			buildPhases = (
+				1464DD8F1BAB3E28009E4795 /* Sources */,
+				1464DD901BAB3E28009E4795 /* Frameworks */,
+				1464DD911BAB3E28009E4795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTAPIstone;
+			productName = FTAPIstone;
+			productReference = 1464DD931BAB3E28009E4795 /* FTAPIstone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1464DDA61BAB3E28009E4795 /* FTAPIstoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464DDBE1BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneTests" */;
+			buildPhases = (
+				1464DDA31BAB3E28009E4795 /* Sources */,
+				1464DDA41BAB3E28009E4795 /* Frameworks */,
+				1464DDA51BAB3E28009E4795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1464DDA91BAB3E28009E4795 /* PBXTargetDependency */,
+			);
+			name = FTAPIstoneTests;
+			productName = FTAPIstoneTests;
+			productReference = 1464DDA71BAB3E28009E4795 /* FTAPIstoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1464DDB11BAB3E28009E4795 /* FTAPIstoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1464DDC11BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneUITests" */;
+			buildPhases = (
+				1464DDAE1BAB3E28009E4795 /* Sources */,
+				1464DDAF1BAB3E28009E4795 /* Frameworks */,
+				1464DDB01BAB3E28009E4795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1464DDB41BAB3E28009E4795 /* PBXTargetDependency */,
+			);
+			name = FTAPIstoneUITests;
+			productName = FTAPIstoneUITests;
+			productReference = 1464DDB21BAB3E28009E4795 /* FTAPIstoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1464DD8B1BAB3E28009E4795 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = TiloBox;
+				TargetAttributes = {
+					1464DD921BAB3E28009E4795 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					1464DDA61BAB3E28009E4795 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 1464DD921BAB3E28009E4795;
+					};
+					1464DDB11BAB3E28009E4795 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 1464DD921BAB3E28009E4795;
+					};
+				};
+			};
+			buildConfigurationList = 1464DD8E1BAB3E28009E4795 /* Build configuration list for PBXProject "FTAPIstone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1464DD8A1BAB3E28009E4795;
+			productRefGroup = 1464DD941BAB3E28009E4795 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1464DD921BAB3E28009E4795 /* FTAPIstone */,
+				1464DDA61BAB3E28009E4795 /* FTAPIstoneTests */,
+				1464DDB11BAB3E28009E4795 /* FTAPIstoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1464DD911BAB3E28009E4795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */,
+				1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */,
+				1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDA51BAB3E28009E4795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDB01BAB3E28009E4795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1464DD8F1BAB3E28009E4795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */,
+				1464DD991BAB3E28009E4795 /* ViewController.swift in Sources */,
+				1464DDC91BAB40BD009E4795 /* Game.swift in Sources */,
+				1464DDC51BAB3E43009E4795 /* Player.swift in Sources */,
+				1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */,
+				1464DDC71BAB3E51009E4795 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDA31BAB3E28009E4795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464DDAC1BAB3E28009E4795 /* FTAPIstoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1464DDAE1BAB3E28009E4795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1464DDB71BAB3E28009E4795 /* FTAPIstoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1464DDA91BAB3E28009E4795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1464DD921BAB3E28009E4795 /* FTAPIstone */;
+			targetProxy = 1464DDA81BAB3E28009E4795 /* PBXContainerItemProxy */;
+		};
+		1464DDB41BAB3E28009E4795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1464DD921BAB3E28009E4795 /* FTAPIstone */;
+			targetProxy = 1464DDB31BAB3E28009E4795 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1464DD9A1BAB3E28009E4795 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1464DD9B1BAB3E28009E4795 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1464DDA01BAB3E28009E4795 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1464DDB91BAB3E28009E4795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1464DDBA1BAB3E28009E4795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1464DDBC1BAB3E28009E4795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FTAPIstone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1464DDBD1BAB3E28009E4795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FTAPIstone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1464DDBF1BAB3E28009E4795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FTAPIstoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTAPIstone.app/FTAPIstone";
+			};
+			name = Debug;
+		};
+		1464DDC01BAB3E28009E4795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FTAPIstoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTAPIstone.app/FTAPIstone";
+			};
+			name = Release;
+		};
+		1464DDC21BAB3E28009E4795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FTAPIstoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FTAPIstone;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1464DDC31BAB3E28009E4795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FTAPIstoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FTAPIstone;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1464DD8E1BAB3E28009E4795 /* Build configuration list for PBXProject "FTAPIstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464DDB91BAB3E28009E4795 /* Debug */,
+				1464DDBA1BAB3E28009E4795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1464DDBB1BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464DDBC1BAB3E28009E4795 /* Debug */,
+				1464DDBD1BAB3E28009E4795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1464DDBE1BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464DDBF1BAB3E28009E4795 /* Debug */,
+				1464DDC01BAB3E28009E4795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1464DDC11BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1464DDC21BAB3E28009E4795 /* Debug */,
+				1464DDC31BAB3E28009E4795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1464DD8B1BAB3E28009E4795 /* Project object */;
+}
