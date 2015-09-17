@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player {
+struct Player {
     var health: Int = 30
     var manaslots: Int = 1
     var mana: Int = 0

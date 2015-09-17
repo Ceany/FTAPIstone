@@ -21,14 +21,14 @@ class Game {
         repeat {
             print("--------Round: \(round)--------")
             round++
-            playRound(player1, opponent: player2)
+            playRound(&player1, opponent: &player2)
             if(player2.health>0){
-                playRound(player2, opponent: player1)
+                playRound(&player2, opponent: &player1)
             }
             print("Health of \(player1.name): \(player1.health)")
             print("Health of \(player2.name): \(player2.health)")
             print("--------END OF ROUND--------")
-            sleep(2)
+            //sleep(2)
         } while(player1.health>0 && player2.health>0)
         
         if(player1.health<1){
@@ -39,7 +39,7 @@ class Game {
 
     }
     
-    func playRound(var activePlayer:Player, var opponent: Player){
+    func playRound(inout activePlayer:Player, inout opponent: Player){
         activePlayer.mana = activePlayer.manaslots
         defer {
             activePlayer.manaslots++
@@ -50,7 +50,7 @@ class Game {
         let cardsToPlay = chooseCards(activePlayer.handcards, mana: activePlayer.mana)
         
         for card in cardsToPlay {
-            playCard(card, opponent: opponent)
+            playCard(card, opponent: &opponent)
         }
     }
     
@@ -70,7 +70,7 @@ class Game {
         return cardsToPlay
     }
     
-    func playCard(card: Card, opponent: Player) {
+    func playCard(card: Card, inout opponent: Player) {
         opponent.health -= card.manaCosts
         print("\(opponent.name) got damaged for \(card.manaCosts).")
     }
