@@ -497,6 +497,7 @@
 				1464DDBD1BAB3E28009E4795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1464DDBE1BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +506,7 @@
 				1464DDC01BAB3E28009E4795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1464DDC11BAB3E28009E4795 /* Build configuration list for PBXNativeTarget "FTAPIstoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +515,7 @@
 				1464DDC31BAB3E28009E4795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

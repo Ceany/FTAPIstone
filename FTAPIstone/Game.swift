@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Game {
     var player1 = Player(name: "Alex")
     var player2 = Player(name: "Maxi")
