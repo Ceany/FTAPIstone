@@ -8,10 +8,12 @@
 
 import Foundation
 
-struct Card {
+public struct Card {
     let manaCosts: Int
+    let damage: Int
     
     init(manaCosts: Int){
         self.manaCosts = manaCosts
+        self.damage = manaCosts
     }
 }
