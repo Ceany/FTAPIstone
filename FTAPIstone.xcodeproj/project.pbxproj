@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143487F51BE141B400036C1D /* PlayerspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143487F41BE141B400036C1D /* PlayerspaceViewController.swift */; };
+		143487F71BE14DDE00036C1D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143487F61BE14DDE00036C1D /* GameViewController.swift */; };
 		1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD961BAB3E28009E4795 /* AppDelegate.swift */; };
 		1464DD991BAB3E28009E4795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD981BAB3E28009E4795 /* ViewController.swift */; };
 		1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9A1BAB3E28009E4795 /* Main.storyboard */; };
@@ -14,10 +16,10 @@
 		1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */; };
 		1464DDAC1BAB3E28009E4795 /* FTAPIstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */; };
 		1464DDB71BAB3E28009E4795 /* FTAPIstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */; };
-		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; settings = {ASSET_TAGS = (); }; };
+		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; };
+		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; };
+		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; };
+		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143487F41BE141B400036C1D /* PlayerspaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerspaceViewController.swift; sourceTree = "<group>"; };
+		143487F61BE14DDE00036C1D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1464DD931BAB3E28009E4795 /* FTAPIstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTAPIstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464DD961BAB3E28009E4795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1464DD981BAB3E28009E4795 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				1464DDCA1BAB417D009E4795 /* Deck.swift */,
 				1464DDC81BAB40BD009E4795 /* Game.swift */,
 				1464DDC41BAB3E43009E4795 /* Player.swift */,
+				143487F61BE14DDE00036C1D /* GameViewController.swift */,
+				143487F41BE141B400036C1D /* PlayerspaceViewController.swift */,
 				1464DDC61BAB3E51009E4795 /* Card.swift */,
 				1464DD9A1BAB3E28009E4795 /* Main.storyboard */,
 				1464DD9D1BAB3E28009E4795 /* Assets.xcassets */,
@@ -271,8 +277,10 @@
 				1464DD991BAB3E28009E4795 /* ViewController.swift in Sources */,
 				1464DDC91BAB40BD009E4795 /* Game.swift in Sources */,
 				1464DDC51BAB3E43009E4795 /* Player.swift in Sources */,
+				143487F71BE14DDE00036C1D /* GameViewController.swift in Sources */,
 				1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */,
 				1464DDC71BAB3E51009E4795 /* Card.swift in Sources */,
+				143487F51BE141B400036C1D /* PlayerspaceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

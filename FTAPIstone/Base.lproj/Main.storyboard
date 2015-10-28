@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="469" y="449"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ipx-Ui-S7F">
             <objects>
-                <viewController id="Pw6-W8-CNA" sceneMemberID="viewController">
+                <viewController id="Pw6-W8-CNA" customClass="GameViewController" customModule="FTAPIstone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Qf-uE-Tnt"/>
                         <viewControllerLayoutGuide type="bottom" id="lp0-Uj-bfs"/>
@@ -99,20 +99,27 @@
                                     <constraint firstAttribute="height" id="gSU-xI-Dc8"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sq-Cz-Iht">
-                                <rect key="frame" x="20" y="300" width="560" height="300"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sq-Cz-Iht" userLabel="Player2 view">
+                                <rect key="frame" x="20" y="325" width="560" height="275"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="5Dc-2R-aAu" kind="embed" id="aaf-KN-4bu"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCy-lx-ZD8">
-                                <rect key="frame" x="20" y="20" width="560" height="280"/>
+                                <rect key="frame" x="20" y="20" width="560" height="255"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="5Dc-2R-aAu" kind="embed" id="GWj-Of-Qt0"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0O-X6-d4d">
+                                <rect key="frame" x="267" y="290.5" width="66" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.27843137254901962" green="0.47843137254901963" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,34 +128,73 @@
                             <constraint firstItem="lp0-Uj-bfs" firstAttribute="top" secondItem="9sq-Cz-Iht" secondAttribute="bottom" id="5j0-lg-Mgp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ytX-hw-E0L" secondAttribute="trailing" id="7F4-XI-Iud"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9sq-Cz-Iht" secondAttribute="trailing" id="89F-DW-5eq"/>
-                            <constraint firstItem="9sq-Cz-Iht" firstAttribute="top" secondItem="ytX-hw-E0L" secondAttribute="bottom" id="Fae-1P-JUq"/>
+                            <constraint firstItem="9sq-Cz-Iht" firstAttribute="top" secondItem="ytX-hw-E0L" secondAttribute="bottom" constant="25" id="Fae-1P-JUq"/>
                             <constraint firstItem="9sq-Cz-Iht" firstAttribute="leading" secondItem="2We-cD-ECF" secondAttribute="leadingMargin" id="U6k-rs-uwu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zCy-lx-ZD8" secondAttribute="trailing" id="ac6-cr-Lqo"/>
                             <constraint firstItem="ytX-hw-E0L" firstAttribute="centerY" secondItem="2We-cD-ECF" secondAttribute="centerY" id="aqx-MV-q7q"/>
                             <constraint firstItem="zCy-lx-ZD8" firstAttribute="leading" secondItem="2We-cD-ECF" secondAttribute="leadingMargin" id="knQ-ll-YgO"/>
-                            <constraint firstItem="ytX-hw-E0L" firstAttribute="top" secondItem="zCy-lx-ZD8" secondAttribute="bottom" id="oFO-VY-GMk"/>
+                            <constraint firstItem="ytX-hw-E0L" firstAttribute="top" secondItem="zCy-lx-ZD8" secondAttribute="bottom" constant="25" id="oFO-VY-GMk"/>
+                            <constraint firstItem="W0O-X6-d4d" firstAttribute="centerY" secondItem="2We-cD-ECF" secondAttribute="centerY" id="p56-Q1-NqN"/>
                             <constraint firstItem="zCy-lx-ZD8" firstAttribute="top" secondItem="4Qf-uE-Tnt" secondAttribute="bottom" id="u7V-h9-fZ7"/>
+                            <constraint firstItem="W0O-X6-d4d" firstAttribute="centerX" secondItem="2We-cD-ECF" secondAttribute="centerX" id="wSB-bW-DJs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roundLabel" destination="W0O-X6-d4d" id="XyP-r2-FNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht4-Dj-3nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1288" y="565"/>
         </scene>
-        <!--View Controller-->
+        <!--Playerspace View Controller-->
         <scene sceneID="oLk-4D-MkW">
             <objects>
-                <viewController id="5Dc-2R-aAu" sceneMemberID="viewController">
+                <viewController id="5Dc-2R-aAu" customClass="PlayerspaceViewController" customModule="FTAPIstone" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7F8-uV-xy0"/>
                         <viewControllerLayoutGuide type="bottom" id="tVN-f7-APi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5Hz-oZ-9xM">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="560" height="275"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8q-nY-t5x">
-                                <rect key="frame" x="187" y="140" width="41" height="20.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-AR-df7">
+                                <rect key="frame" x="0.0" y="0.0" width="560" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUO-jJ-zBr">
+                                        <rect key="frame" x="231" y="64" width="96.5" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="VUO-jJ-zBr" firstAttribute="centerY" secondItem="LfO-AR-df7" secondAttribute="centerY" id="DyZ-wL-v6u"/>
+                                    <constraint firstItem="VUO-jJ-zBr" firstAttribute="centerX" secondItem="LfO-AR-df7" secondAttribute="centerX" id="tMy-Sc-nsj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjn-Xo-4cp">
+                                <rect key="frame" x="0.0" y="127" width="560" height="147.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-at-r78">
+                                        <rect key="frame" x="257.5" y="63.5" width="45.5" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="Mem-at-r78" firstAttribute="centerX" secondItem="Tjn-Xo-4cp" secondAttribute="centerX" id="4jc-oP-sjB"/>
+                                    <constraint firstItem="Mem-at-r78" firstAttribute="centerY" secondItem="Tjn-Xo-4cp" secondAttribute="centerY" id="dRp-sr-8Ee"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8q-nY-t5x">
+                                <rect key="frame" x="229" y="127" width="101.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -156,12 +202,25 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o8q-nY-t5x" firstAttribute="centerY" secondItem="5Hz-oZ-9xM" secondAttribute="centerY" id="1cz-oo-yhn"/>
+                            <constraint firstItem="Tjn-Xo-4cp" firstAttribute="centerX" secondItem="5Hz-oZ-9xM" secondAttribute="centerX" id="5y7-cc-Xyf"/>
+                            <constraint firstItem="Tjn-Xo-4cp" firstAttribute="top" secondItem="o8q-nY-t5x" secondAttribute="top" id="93Z-lc-eso"/>
+                            <constraint firstItem="LfO-AR-df7" firstAttribute="width" secondItem="5Hz-oZ-9xM" secondAttribute="width" id="NX7-BU-J3C"/>
+                            <constraint firstItem="o8q-nY-t5x" firstAttribute="centerX" secondItem="5Hz-oZ-9xM" secondAttribute="centerX" id="OVU-aJ-W8V"/>
+                            <constraint firstItem="LfO-AR-df7" firstAttribute="bottom" secondItem="o8q-nY-t5x" secondAttribute="bottom" id="RRE-qY-Gtp"/>
+                            <constraint firstItem="Tjn-Xo-4cp" firstAttribute="width" secondItem="5Hz-oZ-9xM" secondAttribute="width" id="lCO-Vb-gry"/>
+                            <constraint firstItem="LfO-AR-df7" firstAttribute="top" secondItem="7F8-uV-xy0" secondAttribute="bottom" id="mNe-A0-IxE"/>
+                            <constraint firstItem="tVN-f7-APi" firstAttribute="top" secondItem="Tjn-Xo-4cp" secondAttribute="bottom" id="oET-tS-5rc"/>
                             <constraint firstItem="o8q-nY-t5x" firstAttribute="centerX" secondItem="5Hz-oZ-9xM" secondAttribute="centerX" id="uIt-uc-t47"/>
+                            <constraint firstItem="LfO-AR-df7" firstAttribute="centerX" secondItem="5Hz-oZ-9xM" secondAttribute="centerX" id="zPB-sa-u6v"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerCards" destination="Mem-at-r78" id="kyP-3Y-IOx"/>
+                        <outlet property="playerHealth" destination="o8q-nY-t5x" id="pdo-cR-5ux"/>
+                        <outlet property="playerName" destination="VUO-jJ-zBr" id="WhY-jz-y5K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMZ-2B-q80" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
