@@ -18,59 +18,104 @@ protocol GameInterface {
     func gameFinished(winner: Player, loser: Player)
 }
 
+enum GameError: ErrorType {
+    case CardNotInHand
+}
+
 
 public class Game {
-    let player1: Player
-    let player2: Player
-    let interface: GameInterface
-    var round:Int = 0
+    private let player1: Player
+    private let player2: Player
+    var activePlayer: Player
+    var interface: GameInterface?
     
-    init(interface: GameInterface, player1Name: String, player2Name: String){
+    var round:Int = 0
+    var gameFinished = false
+    
+    convenience init(interface: GameInterface, player1Name: String, player2Name: String){
+        self.init(player1Name: player1Name, player2Name: player2Name);
         self.interface = interface
-        self.player1 = Player(name: player1Name)
-        self.player2 = Player(name: player2Name)
     }
     
-    public func playRound() {
-        
-        interface.startedTurn(player1)
-        playTurn(player1, opponent: player2)
-        interface.finishedTurn(player1)
-        if player2.health > 0 {
-            interface.startedTurn(player2)
-            playTurn(player2, opponent: player1)
-            interface.finishedTurn(player2)
-        } else {
-            interface.gameFinished(player1, loser: player2)
-        }
-        
-        if player1.health <= 0 {
-            interface.gameFinished(player2, loser: player1)
-        }
+    init(player1Name: String, player2Name: String){
+        player1 = Player(name: player1Name)
+        player2 = Player(name: player2Name)
+        activePlayer = player1
     }
     
     public func getOtherPlayer(player: Player) -> Player {
         return player == player1 ? player2 : player1
     }
     
-    private func playTurn(activePlayer: Player, opponent: Player){
-        activePlayer.mana = activePlayer.manaslots
-        defer {
-            activePlayer.manaslots++
-        }
-        
+    public func drawCard() -> Card {
         let drawnCard = activePlayer.deck.drawCard()
-        interface.drawnCard(activePlayer, card: drawnCard)
         activePlayer.handcards.append(drawnCard)
         
-        let cardsToPlay = chooseCards(activePlayer.handcards, mana: activePlayer.mana)
+        return drawnCard
+    }
+    
+    public func startTurn() {
+        interface?.startedTurn(activePlayer)
+        activePlayer.mana = activePlayer.manaslots
         
-        for card in cardsToPlay {
-            playCard(card, opponent: opponent)
+        let drawnCard = drawCard()
+        interface?.drawnCard(activePlayer, card: drawnCard)
+    }
+    
+    public func finishTurn() {
+        var player = activePlayer == player1 ? player2 : player1
+        
+        defer {
+            player.manaslots++
+        }
+        
+        interface?.finishedTurn(activePlayer)
+        
+        let opponent = getOtherPlayer(activePlayer)
+        if opponent.health > 0 {
+            activePlayer = opponent
+        } else {
+            gameFinished = true
+            interface?.gameFinished(activePlayer, loser: opponent)
         }
     }
     
-    private func chooseCards(var cards: [Card], mana: Int) -> [Card] {
+    public func playCard(card: Card) throws {
+        if !activePlayer.handcards.contains(card) {
+            throw GameError.CardNotInHand
+        }
+        
+        let opponent = getOtherPlayer(activePlayer)
+        opponent.health -= card.damage
+        interface?.playedCard(opponent, cardPlayed: card)
+    }
+    
+}
+
+extension Game {
+    
+    public func playAutomatically(delayBetweenTurns: UInt32) throws {
+        repeat {
+            try playTurnAutomatically()
+            sleep(delayBetweenTurns)
+        } while (!gameFinished)
+    }
+    
+    private func playTurnAutomatically() throws {
+        startTurn()
+        
+        defer {
+            finishTurn()
+        }
+        
+        let cardsToPlay = chooseCardsAutomatically(activePlayer.handcards, mana: activePlayer.mana)
+        
+        for card in cardsToPlay {
+            try playCard(card)
+        }
+    }
+    
+    private func chooseCardsAutomatically(var cards: [Card], mana: Int) -> [Card] {
         var manaLeft = mana
         var cardsToPlay = [Card]()
         
@@ -84,11 +129,6 @@ public class Game {
         } while( manaLeft > 0 )
         
         return cardsToPlay
-    }
-    
-    private func playCard(card: Card, opponent: Player) {
-        opponent.health -= card.manaCosts
-        interface.playedCard(opponent, cardPlayed: card)
     }
     
 }

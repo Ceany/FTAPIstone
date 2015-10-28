@@ -14,7 +14,6 @@
 		1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9A1BAB3E28009E4795 /* Main.storyboard */; };
 		1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9D1BAB3E28009E4795 /* Assets.xcassets */; };
 		1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */; };
-		1464DDAC1BAB3E28009E4795 /* FTAPIstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */; };
 		1464DDB71BAB3E28009E4795 /* FTAPIstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */; };
 		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; };
 		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; };
@@ -50,7 +49,6 @@
 		1464DDA01BAB3E28009E4795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1464DDA21BAB3E28009E4795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1464DDA71BAB3E28009E4795 /* FTAPIstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAPIstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAPIstoneTests.swift; sourceTree = "<group>"; };
 		1464DDAD1BAB3E28009E4795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1464DDB21BAB3E28009E4795 /* FTAPIstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAPIstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAPIstoneUITests.swift; sourceTree = "<group>"; };
@@ -59,6 +57,7 @@
 		1464DDC61BAB3E51009E4795 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1464DDC81BAB40BD009E4795 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1464DDCA1BAB417D009E4795 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		FA8B482A1BE14BDA0027AA7D /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../FTAPIstone/Tests/GameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +127,7 @@
 		1464DDAA1BAB3E28009E4795 /* FTAPIstoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				1464DDAB1BAB3E28009E4795 /* FTAPIstoneTests.swift */,
+				FA8B482A1BE14BDA0027AA7D /* GameTests.swift */,
 				1464DDAD1BAB3E28009E4795 /* Info.plist */,
 			);
 			path = FTAPIstoneTests;
@@ -288,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1464DDAC1BAB3E28009E4795 /* FTAPIstoneTests.swift in Sources */,
+				FA8B482B1BE14BDA0027AA7D /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

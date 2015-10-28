@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
 
     @IBAction private func tappedStartButton(sender: AnyObject) {
-        
+
     }
 }
 

@@ -14,7 +14,7 @@ public class Player : Equatable {
     var mana: Int = 0
     var deck: Deck
     var handcards: [Card]
-    var name:String
+    var name: String
     
     init(name: String){
         self.name = name
