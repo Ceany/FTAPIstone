@@ -8,55 +8,70 @@
 
 import Foundation
 
-
-class Game {
-    var player1 = Player(name: "Alex")
-    var player2 = Player(name: "Maxi")
-    var round:Int = 1
+protocol GameInterface {
+    func startedTurn(player: Player)
+    func finishedTurn(player: Player)
     
-    init(){
-        playGame()
+    func drawnCard(player: Player, card: Card)
+    func playedCard(opponent: Player, cardPlayed: Card)
+    
+    func gameFinished(winner: Player, loser: Player)
+}
+
+
+public class Game {
+    let player1: Player
+    let player2: Player
+    let interface: GameInterface
+    var round:Int = 0
+    
+    init(interface: GameInterface, player1Name: String, player2Name: String){
+        self.interface = interface
+        self.player1 = Player(name: player1Name)
+        self.player2 = Player(name: player2Name)
     }
     
-    func playGame() {
-        repeat {
-            print("--------Round: \(round)--------")
-            round++
-            playRound(&player1, opponent: &player2)
-            if(player2.health>0){
-                playRound(&player2, opponent: &player1)
-            }
-            print("Health of \(player1.name): \(player1.health)")
-            print("Health of \(player2.name): \(player2.health)")
-            print("--------END OF ROUND--------")
-            //sleep(2)
-        } while(player1.health>0 && player2.health>0)
+    public func playRound() {
         
-        if(player1.health<1){
-            print("\(player2.name) wins")
+        interface.startedTurn(player1)
+        playTurn(player1, opponent: player2)
+        interface.finishedTurn(player1)
+        if player2.health > 0 {
+            interface.startedTurn(player2)
+            playTurn(player2, opponent: player1)
+            interface.finishedTurn(player2)
         } else {
-            print("\(player1.name) wins")
+            interface.gameFinished(player1, loser: player2)
         }
-
+        
+        if player1.health <= 0 {
+            interface.gameFinished(player2, loser: player1)
+        }
     }
     
-    func playRound(inout activePlayer:Player, inout opponent: Player){
+    public func getOtherPlayer(player: Player) -> Player {
+        return player == player1 ? player2 : player1
+    }
+    
+    private func playTurn(activePlayer: Player, opponent: Player){
         activePlayer.mana = activePlayer.manaslots
         defer {
             activePlayer.manaslots++
         }
         
-        activePlayer.handcards.append(activePlayer.deck.drawCard())
+        let drawnCard = activePlayer.deck.drawCard()
+        interface.drawnCard(activePlayer, card: drawnCard)
+        activePlayer.handcards.append(drawnCard)
         
         let cardsToPlay = chooseCards(activePlayer.handcards, mana: activePlayer.mana)
         
         for card in cardsToPlay {
-            playCard(card, opponent: &opponent)
+            playCard(card, opponent: opponent)
         }
     }
     
-    func chooseCards(var cards: [Card], mana: Int) -> [Card] {
-        var manaLeft = mana;
+    private func chooseCards(var cards: [Card], mana: Int) -> [Card] {
+        var manaLeft = mana
         var cardsToPlay = [Card]()
         
         repeat {
@@ -71,9 +86,9 @@ class Game {
         return cardsToPlay
     }
     
-    func playCard(card: Card, inout opponent: Player) {
+    private func playCard(card: Card, opponent: Player) {
         opponent.health -= card.manaCosts
-        print("\(opponent.name) got damaged for \(card.manaCosts).")
+        interface.playedCard(opponent, cardPlayed: card)
     }
     
 }

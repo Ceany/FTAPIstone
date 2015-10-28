@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Player {
+public class Player : Equatable {
     var health: Int = 30
     var manaslots: Int = 1
     var mana: Int = 0
@@ -22,10 +22,8 @@ struct Player {
         handcards = deck.drawCards(3)
     }
     
-    /*func describeHand() -> String {
-        var
-        for card in handcards {
-            
-        }
-    }*/
+}
+
+public func ==(lhs: Player, rhs: Player) -> Bool {
+    return lhs.name == rhs.name;
 }
