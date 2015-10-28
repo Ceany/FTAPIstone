@@ -27,13 +27,17 @@ public class Game {
     private let player1: Player
     private let player2: Player
     var activePlayer: Player
-    let interface: GameInterface
+    var interface: GameInterface?
     
     var round:Int = 0
     var gameFinished = false
     
-    init(interface: GameInterface, player1Name: String, player2Name: String){
+    convenience init(interface: GameInterface, player1Name: String, player2Name: String){
+        self.init(player1Name: player1Name, player2Name: player2Name);
         self.interface = interface
+    }
+    
+    init(player1Name: String, player2Name: String){
         player1 = Player(name: player1Name)
         player2 = Player(name: player2Name)
         activePlayer = player1
@@ -43,28 +47,36 @@ public class Game {
         return player == player1 ? player2 : player1
     }
     
+    public func drawCard() -> Card {
+        let drawnCard = activePlayer.deck.drawCard()
+        activePlayer.handcards.append(drawnCard)
+        
+        return drawnCard
+    }
+    
     public func startTurn() {
-        interface.startedTurn(activePlayer)
+        interface?.startedTurn(activePlayer)
         activePlayer.mana = activePlayer.manaslots
         
-        let drawnCard = activePlayer.deck.drawCard()
-        interface.drawnCard(activePlayer, card: drawnCard)
-        activePlayer.handcards.append(drawnCard)
+        let drawnCard = drawCard()
+        interface?.drawnCard(activePlayer, card: drawnCard)
     }
     
     public func finishTurn() {
+        var player = activePlayer == player1 ? player2 : player1
+        
         defer {
-            activePlayer.manaslots++
+            player.manaslots++
         }
         
-        interface.finishedTurn(activePlayer)
+        interface?.finishedTurn(activePlayer)
         
         let opponent = getOtherPlayer(activePlayer)
         if opponent.health > 0 {
             activePlayer = opponent
         } else {
             gameFinished = true
-            interface.gameFinished(activePlayer, loser: opponent)
+            interface?.gameFinished(activePlayer, loser: opponent)
         }
     }
     
@@ -75,17 +87,17 @@ public class Game {
         
         let opponent = getOtherPlayer(activePlayer)
         opponent.health -= card.damage
-        interface.playedCard(opponent, cardPlayed: card)
+        interface?.playedCard(opponent, cardPlayed: card)
     }
     
 }
 
 extension Game {
     
-    public func playAutomatically() throws {
+    public func playAutomatically(delayBetweenTurns: UInt32) throws {
         repeat {
             try playTurnAutomatically()
-            sleep(3)
+            sleep(delayBetweenTurns)
         } while (!gameFinished)
     }
     
