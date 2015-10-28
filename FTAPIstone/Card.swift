@@ -16,6 +16,10 @@ public struct Card: Equatable {
         self.manaCosts = manaCosts
         self.damage = manaCosts
     }
+    
+    var description: String {
+        return "Card(\(manaCosts))"
+    }
 }
 
 public func ==(lhs: Card, rhs: Card) -> Bool {

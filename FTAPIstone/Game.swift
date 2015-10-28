@@ -24,8 +24,8 @@ enum GameError: ErrorType {
 
 
 public class Game {
-    private let player1: Player
-    private let player2: Player
+    let player1: Player
+    let player2: Player
     var activePlayer: Player
     var interface: GameInterface?
     
@@ -55,6 +55,8 @@ public class Game {
     }
     
     public func startTurn() {
+        round++
+        
         interface?.startedTurn(activePlayer)
         activePlayer.mana = activePlayer.manaslots
         
@@ -101,7 +103,7 @@ extension Game {
         } while (!gameFinished)
     }
     
-    private func playTurnAutomatically() throws {
+    public func playTurnAutomatically() throws {
         startTurn()
         
         defer {

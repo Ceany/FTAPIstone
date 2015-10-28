@@ -29,6 +29,7 @@ class GameTests: XCTestCase {
         } catch {
             XCTFail()
         }
+        XCTAssertTrue(game.round > 1)
         XCTAssertTrue(game.gameFinished)
         XCTAssertTrue(interface.playerLost!.health <= 0)
         XCTAssertTrue(interface.playerWon!.health > 0)

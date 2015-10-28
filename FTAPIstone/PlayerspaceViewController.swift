@@ -16,7 +16,8 @@ public class PlayerspaceViewController: UIViewController {
     
     @IBOutlet weak var playerName: UILabel!
     @IBOutlet weak var playerHealth: UILabel!
-    @IBOutlet weak var playerCards: UILabel!
+    @IBOutlet weak var playerCards: UITextView!
+    var player: Player?
     var dataProvider: PlayerspaceDataProvider?
     
     override public func viewDidLoad() {
@@ -25,7 +26,13 @@ public class PlayerspaceViewController: UIViewController {
         dataProvider?.requestForData(self)
     }
     
-    func setUpLabels(name:String) {
-        playerName.text = name
+    func updatePlayer() {
+        playerName.text = player?.name
+        playerHealth.text = String(player?.health)
+        var cards = "";
+        player?.handcards.map({ (card: Card) in
+            cards += "\(card.description), "
+        })
+        playerCards.text = cards
     }
 }
