@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Card {
+public struct Card: Equatable {
     let manaCosts: Int
     let damage: Int
     
@@ -16,4 +16,8 @@ public struct Card {
         self.manaCosts = manaCosts
         self.damage = manaCosts
     }
+}
+
+public func ==(lhs: Card, rhs: Card) -> Bool {
+    return lhs.manaCosts == rhs.manaCosts && lhs.damage == rhs.damage
 }
