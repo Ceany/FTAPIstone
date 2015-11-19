@@ -12,24 +12,29 @@ import SpriteKit
 class GameViewController: UIViewController, GameInterface {
     
     var game: Game?
+    var player1Name: String = ""
+    var scene: BoardScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let skView = self.view as! SKView
         
-        if let scene = BoardScene(fileNamed:"BoardScene") {
-            // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
-        }
+        scene = BoardScene(size: skView.bounds.size)
+        
+        // Configure the view.
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        
+        /* Sprite Kit applies additional optimizations to improve rendering performance */
+        skView.ignoresSiblingOrder = true
+        
+        /* Set the scale mode to scale to fit the window */
+        scene.scaleMode = .AspectFill
+        
+        skView.presentScene(scene)
+        
+        setupGame()
+        
     }
     
     
@@ -55,23 +60,27 @@ class GameViewController: UIViewController, GameInterface {
     }
     
     func startedTurn(player: Player) {
-
+        if player1Name == "" {
+            player1Name = player.name
+        }
     }
     
     func finishedTurn(player: Player) {
- 
+        
     }
     
     func drawnCard(player: Player, card: Card) {
+        let playerNumber = player.name == player1Name ? 1 : 2
         
+        scene.renderCards(playerNumber, deck: player.deck)
     }
     
     func playedCard(opponent: Player, cardPlayed: Card) {
-        
+        scene.renderScore("\(opponent.name) was dealt \(cardPlayed.damage) damage!")
     }
     
     func gameFinished(winner: Player, loser: Player) {
-
+        scene.renderScore("Game finished and \(winner.name) won!")
     }
     
 }

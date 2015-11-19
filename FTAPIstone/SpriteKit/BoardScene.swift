@@ -10,12 +10,36 @@ import UIKit
 import SpriteKit
 
 class BoardScene: SKScene {
+    let scoreNode = SKLabelNode(text: "TEST")
+    var cardNodesPlayer1 = [SKLabelNode]()
+    var cardNodesPlayer2 = [SKLabelNode]()
+    
     override func didMoveToView(view: SKView) {
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "FTAPIStone 4eva 10/10 -IGN!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        scoreNode.position = CGPointMake(CGRectGetMidX(self.frame), 25)
         
-        self.addChild(myLabel)
+        self.addChild(scoreNode)
+    }
+    
+    func renderScore(score: String) {
+       scoreNode.text = score
+    }
+    
+    func renderCards(playerNumber: Int, deck: Deck) {
+        let verticalOffset = 200 * playerNumber
+        
+        var cardNodes = playerNumber == 1 ? cardNodesPlayer1 : cardNodesPlayer2
+        
+        self.removeChildrenInArray(cardNodes)
+        cardNodes.removeAll()
+        
+        var index = 0;
+        for card in deck.cards {
+            let cardNode = SKLabelNode.init(text: "(\(card.damage))")
+            cardNodes.append(cardNode)
+            cardNode.position = CGPoint(x: (Int(CGRectGetMinX(self.frame)) + 50) * index, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
+            
+            self.addChild(cardNode)
+            index++
+        }
     }
 }
