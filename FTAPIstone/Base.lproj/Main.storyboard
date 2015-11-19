@@ -53,7 +53,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xvp-nO-sIf"/>
-                                    <segue destination="Pw6-W8-CNA" kind="show" id="VxO-K4-sn8"/>
+                                    <segue destination="Pw6-W8-CNA" kind="show" identifier="game" id="VxO-K4-sn8"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -17,10 +17,9 @@ class ViewController: UIViewController {
         
         self.startButton.layer.cornerRadius = 5.0;
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(animated: Bool) {
+        self.performSegueWithIdentifier("game", sender: self)
     }
 
 
