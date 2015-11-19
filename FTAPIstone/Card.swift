@@ -14,12 +14,11 @@ public struct Card: Equatable {
     let attack: Int
     let identifier: Int
     
-    init(){
-        self.manaCosts = 0
-        self.damage = 0
+    init() {
+        self.init(manaCosts: 0, health: 0, attack: 0, identifier: 0)
     }
     
-    init(manaCosts: Int){
+    init(manaCosts: Int, health: Int, attack: Int, identifier: Int){
         self.manaCosts = manaCosts
         self.health = health
         self.attack = attack

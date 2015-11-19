@@ -18,7 +18,7 @@ class CardNode: SKLabelNode {
         super.init()
         self.player = player
         self.card = card
-        self.text = "(\(card.damage))"
+        self.text = "(\(card.attack))"
     }
 
     required init?(coder aDecoder: NSCoder) {

@@ -88,7 +88,7 @@ public class Game {
             throw GameError.CardNotInHand
         }
         
-        opponentPlayer.health -= card.damage
+        opponentPlayer.health -= card.attack
         interface?.playedCard(opponentPlayer, cardPlayed: card)
     }
     
