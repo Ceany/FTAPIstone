@@ -88,7 +88,7 @@ public class Game {
         }
         
         let opponent = getOtherPlayer(activePlayer)
-        opponent.health -= card.damage
+        opponent.health -= card.attack
         interface?.playedCard(opponent, cardPlayed: card)
     }
     

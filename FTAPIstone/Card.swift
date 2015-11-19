@@ -10,11 +10,15 @@ import Foundation
 
 public struct Card: Equatable {
     let manaCosts: Int
-    let damage: Int
+    let health: Int
+    let attack: Int
+    let identifier: Int
     
-    init(manaCosts: Int){
+    init(manaCosts: Int, health: Int, attack: Int, identifier: Int){
         self.manaCosts = manaCosts
-        self.damage = manaCosts
+        self.health = health
+        self.attack = attack
+        self.identifier = identifier
     }
     
     var description: String {
@@ -23,5 +27,5 @@ public struct Card: Equatable {
 }
 
 public func ==(lhs: Card, rhs: Card) -> Bool {
-    return lhs.manaCosts == rhs.manaCosts && lhs.damage == rhs.damage
+    return lhs.manaCosts == rhs.manaCosts && lhs.attack == rhs.attack
 }

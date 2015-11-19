@@ -57,7 +57,7 @@ class InterfaceTest: GameInterface {
         print("Drew Card: \(card.manaCosts) (\(player.name))")
     }
     func playedCard(opponent: Player, cardPlayed: Card) {
-        print("Played Card: \(cardPlayed.damage)  against (\(opponent.name))")
+        print("Played Card: \(cardPlayed.attack)  against (\(opponent.name))")
     }
     
     func gameFinished(winner: Player, loser: Player) {
