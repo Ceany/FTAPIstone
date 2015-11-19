@@ -24,9 +24,17 @@ enum GameError: ErrorType {
 
 
 public class Game {
-    let player1: Player
-    let player2: Player
-    var activePlayer: Player
+    var players: [Player]
+    var activePlayer: Player {
+        get {
+            return players[0]
+        }
+    }
+    var opponentPlayer: Player {
+        get {
+            return players[1]
+        }
+    }
     var interface: GameInterface?
     
     var round:Int = 0
@@ -38,13 +46,7 @@ public class Game {
     }
     
     init(player1Name: String, player2Name: String){
-        player1 = Player(name: player1Name)
-        player2 = Player(name: player2Name)
-        activePlayer = player1
-    }
-    
-    public func getOtherPlayer(player: Player) -> Player {
-        return player == player1 ? player2 : player1
+        players = [Player(name: player1Name), Player(name: player2Name)]
     }
     
     public func drawCard() -> Card {
@@ -65,7 +67,7 @@ public class Game {
     }
     
     public func finishTurn() {
-        var player = activePlayer == player1 ? player2 : player1
+        var player = activePlayer == players[0] ? players[1] : players[0]
         
         defer {
             player.manaslots++
@@ -73,12 +75,11 @@ public class Game {
         
         interface?.finishedTurn(activePlayer)
         
-        let opponent = getOtherPlayer(activePlayer)
-        if opponent.health > 0 {
-            activePlayer = opponent
+        if opponentPlayer.health > 0 {
+            players = [players[1], players[0]]
         } else {
             gameFinished = true
-            interface?.gameFinished(activePlayer, loser: opponent)
+            interface?.gameFinished(activePlayer, loser: opponentPlayer)
         }
     }
     
@@ -87,9 +88,8 @@ public class Game {
             throw GameError.CardNotInHand
         }
         
-        let opponent = getOtherPlayer(activePlayer)
-        opponent.health -= card.damage
-        interface?.playedCard(opponent, cardPlayed: card)
+        opponentPlayer.health -= card.damage
+        interface?.playedCard(opponentPlayer, cardPlayed: card)
     }
     
 }

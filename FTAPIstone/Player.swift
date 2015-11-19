@@ -8,7 +8,10 @@
 
 import Foundation
 
+private var playerNumber = 1
+
 public class Player : Equatable {
+    let number: Int
     var health: Int = 30
     var manaslots: Int = 1
     var mana: Int = 0
@@ -16,10 +19,16 @@ public class Player : Equatable {
     var handcards: [Card]
     var name: String
     
+    convenience init(){
+        self.init(name: "")
+    }
+    
     init(name: String){
         self.name = name
         deck = Deck()
         handcards = deck.drawCards(3)
+        number = playerNumber
+        playerNumber++
     }
     
 }

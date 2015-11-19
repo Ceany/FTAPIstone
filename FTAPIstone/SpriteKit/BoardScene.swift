@@ -10,12 +10,13 @@ import UIKit
 import SpriteKit
 
 class BoardScene: SKScene {
-    let scoreNode = SKLabelNode(text: "TEST")
-    var cardNodesPlayer1 = [SKLabelNode]()
-    var cardNodesPlayer2 = [SKLabelNode]()
+    let scoreNode = SKLabelNode()
+    var cardNodes = [CardNode]()
+    var game: Game?
     
     override func didMoveToView(view: SKView) {
-        scoreNode.position = CGPointMake(CGRectGetMidX(self.frame), 25)
+        scoreNode.position = CGPointMake(10, 25)
+        scoreNode.horizontalAlignmentMode = .Left;
         
         self.addChild(scoreNode)
     }
@@ -24,19 +25,23 @@ class BoardScene: SKScene {
        scoreNode.text = score
     }
     
-    func renderCards(playerNumber: Int, deck: Deck) {
-        let verticalOffset = 200 * playerNumber
+    func renderCards(player: Player, deck: Deck) {
+        let verticalOffset = 200 * player.number
         
-        var cardNodes = playerNumber == 1 ? cardNodesPlayer1 : cardNodesPlayer2
-        
-        self.removeChildrenInArray(cardNodes)
-        cardNodes.removeAll()
+        cardNodes = cardNodes.filter { (cardNode) -> Bool in
+            if cardNode.player == player {
+                cardNode.removeFromParent()
+                return false
+            }
+            return true
+        }
         
         var index = 0;
         for card in deck.cards {
-            let cardNode = SKLabelNode.init(text: "(\(card.damage))")
+            let cardNode = CardNode(player: player, card: card)
+            cardNode.horizontalAlignmentMode = .Left;
             cardNodes.append(cardNode)
-            cardNode.position = CGPoint(x: (Int(CGRectGetMinX(self.frame)) + 50) * index, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
+            cardNode.position = CGPoint(x: 30 * index, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
             
             self.addChild(cardNode)
             index++

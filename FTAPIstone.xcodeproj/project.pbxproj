@@ -22,6 +22,7 @@
 		FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */; };
 		FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */; };
 		FA8B482B1BE14BDA0027AA7D /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B482A1BE14BDA0027AA7D /* GameTests.swift */; };
+		FAE3DC6D1BFE617A0034BAC2 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardScene.swift; path = SpriteKit/BoardScene.swift; sourceTree = "<group>"; };
 		FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BoardScene.sks; path = SpriteKit/BoardScene.sks; sourceTree = "<group>"; };
 		FA8B482A1BE14BDA0027AA7D /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../FTAPIstone/Tests/GameTests.swift; sourceTree = "<group>"; };
+		FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardNode.swift; path = SpriteKit/CardNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */,
 				FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */,
+				FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1464DDC51BAB3E43009E4795 /* Player.swift in Sources */,
 				143487F71BE14DDE00036C1D /* GameViewController.swift in Sources */,
 				1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */,
+				FAE3DC6D1BFE617A0034BAC2 /* CardNode.swift in Sources */,
 				FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */,
 				1464DDC71BAB3E51009E4795 /* Card.swift in Sources */,
 			);
@@ -451,7 +455,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.FTAPIstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -465,7 +469,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.FTAPIstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -12,6 +12,11 @@ public struct Card: Equatable {
     let manaCosts: Int
     let damage: Int
     
+    init(){
+        self.manaCosts = 0
+        self.damage = 0
+    }
+    
     init(manaCosts: Int){
         self.manaCosts = manaCosts
         self.damage = manaCosts

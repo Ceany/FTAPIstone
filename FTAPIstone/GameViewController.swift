@@ -20,6 +20,11 @@ class GameViewController: UIViewController, GameInterface {
         let skView = self.view as! SKView
         
         scene = BoardScene(size: skView.bounds.size)
+        setupGame()
+        
+        if let game = self.game {
+            scene.game = game
+        }
         
         // Configure the view.
         skView.showsFPS = true
@@ -33,7 +38,7 @@ class GameViewController: UIViewController, GameInterface {
         
         skView.presentScene(scene)
         
-        setupGame()
+        
         
     }
     
@@ -70,9 +75,7 @@ class GameViewController: UIViewController, GameInterface {
     }
     
     func drawnCard(player: Player, card: Card) {
-        let playerNumber = player.name == player1Name ? 1 : 2
-        
-        scene.renderCards(playerNumber, deck: player.deck)
+        scene.renderCards(player, deck: player.deck)
     }
     
     func playedCard(opponent: Player, cardPlayed: Card) {
