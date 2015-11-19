@@ -13,21 +13,28 @@ public struct Deck {
     
     init(){
         cards = []
-        if let cardsPath = NSBundle.mainBundle().pathForResource("cards", ofType: "json") {
-            if let cardsData = NSData.init(contentsOfFile: cardsPath) {
-                do {
-                    let cardsArray: NSArray = try NSJSONSerialization.JSONObjectWithData(cardsData, options:NSJSONReadingOptions.AllowFragments) as! NSArray
-                    for card in cardsArray as! [NSDictionary]{
-                        cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
-                        cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
+        
+        do {
+            if let cardsPath = NSBundle.mainBundle().pathForResource("cards", ofType: "json") {
+                if let cardsData = NSData(contentsOfFile: cardsPath) {
+                    
+                    if  let cardsJSON: AnyObject = try NSJSONSerialization.JSONObjectWithData(cardsData, options:NSJSONReadingOptions.MutableContainers) {
+                        if let cardsArray: NSArray = cardsJSON["cards"] as NSArray {
+                            for card in cardsArray as! [NSDictionary]{
+                                cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
+                                cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
+                            }
+                        }
                     }
-                } catch  {
-                    let error: NSError = NSError(domain: "Convertig error", code: 1, userInfo: nil)
-                    print(error)
+                    
+                    
                 }
-                
             }
+            
+        } catch let error as NSError {
+           print(error)
         }
+        
     }
     
     mutating func drawCard() -> Card {

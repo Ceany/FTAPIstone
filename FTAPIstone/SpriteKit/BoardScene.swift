@@ -34,7 +34,7 @@ class BoardScene: SKScene {
         
         var index = 0;
         for card in deck.cards {
-            let cardNode = SKLabelNode.init(text: "(\(card.damage))")
+            let cardNode = SKLabelNode.init(text: "(\(card.attack))")
             cardNodes.append(cardNode)
             cardNode.position = CGPoint(x: (Int(CGRectGetMinX(self.frame)) + 50) * index, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
             

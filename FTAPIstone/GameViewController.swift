@@ -76,7 +76,7 @@ class GameViewController: UIViewController, GameInterface {
     }
     
     func playedCard(opponent: Player, cardPlayed: Card) {
-        scene.renderScore("\(opponent.name) was dealt \(cardPlayed.damage) damage!")
+        scene.renderScore("\(opponent.name) was dealt \(cardPlayed.attack) damage!")
     }
     
     func gameFinished(winner: Player, loser: Player) {

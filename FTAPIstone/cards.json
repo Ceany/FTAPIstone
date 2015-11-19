@@ -1,92 +1,95 @@
- [
-  {
-  manaCosts: 1,
-  health: 1,
-  attack: 2,
-  identifier: 1
-  },
-  {
-  manaCosts: 4,
-  health: 7,
-  attack: 2,
-  identifier: 2
-  },
-  {
-  manaCosts: 1,
-  health: 1,
-  attack: 1,
-  identifier: 3
-  },
-  {
-  manaCosts: 1,
-  health: 2,
-  attack: 2,
-  identifier: 4
-  },
-  {
-  manaCosts: 4,
-  health: 5,
-  attack: 4,
-  identifier: 5
-  },
-  {
-  manaCosts: 1,
-  health: 1,
-  attack: 2,
-  identifier: 6
-  },
-  {
-  manaCosts: 6,
-  health: 7,
-  attack: 6,
-  identifier: 7
-  },
-  {
-  manaCosts: 0,
-  health: 1,
-  attack: 1,
-  identifier: 8
-  },
-  {
-  manaCosts: 1,
-  health: 1,
-  attack: 1,
-  identifier: 9
-  },
-  {
-  manaCosts: 6,
-  health: 6,
-  attack: 6,
-  identifier: 10
-  },
-  {
-  manaCosts: 4,
-  health: 2,
-  attack: 5,
-  identifier: 11
-  },
-  {
-  manaCosts: 7,
-  health: 5,
-  attack: 9,
-  identifier: 12
-  },
-  {
-  manaCosts: 2,
-  health: 2,
-  attack: 3,
-  identifier: 13
-  },
-  {
-  manaCosts: 1,
-  health: 1,
-  attack: 2,
-  identifier: 14
-  },
-  {
-  manaCosts: 0,
-  health: 1,
-  attack: 1,
-  identifier: 15
-  }
-  ]
+{
+    "cards": [
+              {
+              "manaCosts": 1,
+              "health": 1,
+              "attack": 2,
+              "identifier": 1
+              },
+              {
+              "manaCosts": 4,
+              "health": 7,
+              "attack": 2,
+              "identifier": 2
+              },
+              {
+              "manaCosts": 1,
+              "health": 1,
+              "attack": 1,
+              "identifier": 3
+              },
+              {
+              "manaCosts": 1,
+              "health": 2,
+              "attack": 2,
+              "identifier": 4
+              },
+              {
+              "manaCosts": 4,
+              "health": 5,
+              "attack": 4,
+              "identifier": 5
+              },
+              {
+              "manaCosts": 1,
+              "health": 1,
+              "attack": 2,
+              "identifier": 6
+              },
+              {
+              "manaCosts": 6,
+              "health": 7,
+              "attack": 6,
+              "identifier": 7
+              },
+              {
+              "manaCosts": 0,
+              "health": 1,
+              "attack": 1,
+              "identifier": 8
+              },
+              {
+              "manaCosts": 1,
+              "health": 1,
+              "attack": 1,
+              "identifier": 9
+              },
+              {
+              "manaCosts": 6,
+              "health": 6,
+              "attack": 6,
+              "identifier": 10
+              },
+              {
+              "manaCosts": 4,
+              "health": 2,
+              "attack": 5,
+              "identifier": 11
+              },
+              {
+              "manaCosts": 7,
+              "health": 5,
+              "attack": 9,
+              "identifier": 12
+              },
+              {
+              "manaCosts": 2,
+              "health": 2,
+              "attack": 3,
+              "identifier": 13
+              },
+              {
+              "manaCosts": 1,
+              "health": 1,
+              "attack": 2,
+              "identifier": 14
+              },
+              {
+              "manaCosts": 0,
+              "health": 1,
+              "attack": 1,
+              "identifier": 15
+              }
+              ]
+    
+}
