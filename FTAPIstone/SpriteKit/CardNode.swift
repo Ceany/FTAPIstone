@@ -9,19 +9,17 @@
 import UIKit
 import SpriteKit
 
-class CardNode: SKLabelNode {
+class CardNode: SKSpriteNode {
 
     var player: Player = Player()
     var card: Card = Card()
     
-    init(player: Player, card: Card) {
-        super.init()
+    convenience init(player: Player, card: Card) {
+        let color = UIColor()
+        let texture = SKTexture(imageNamed: String(card.identifier))
+        let size = CGSizeMake(100.0, 150.0)
+        self.init(texture: texture, color: color, size: size)
         self.player = player
         self.card = card
-        self.text = "(\(card.attack))"
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
 }

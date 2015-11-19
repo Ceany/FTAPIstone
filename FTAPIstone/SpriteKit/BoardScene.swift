@@ -11,6 +11,7 @@ import SpriteKit
 
 class BoardScene: SKScene {
     let scoreNode = SKLabelNode()
+    let playerLabels = [SKLabelNode(), SKLabelNode()]
     var cardNodes = [CardNode]()
     var game: Game?
     
@@ -18,14 +19,21 @@ class BoardScene: SKScene {
         scoreNode.position = CGPointMake(10, 25)
         scoreNode.horizontalAlignmentMode = .Left;
         
-        self.addChild(scoreNode)
+        playerLabels[0].position = CGPointMake(10, 350)
+        playerLabels[0].horizontalAlignmentMode = .Left;
+        playerLabels[1].position = CGPointMake(10, 550)
+        playerLabels[1].horizontalAlignmentMode = .Left;
+
+        addChild(playerLabels[0])
+        addChild(playerLabels[1])
+        addChild(scoreNode)
     }
     
     func renderScore(score: String) {
        scoreNode.text = score
     }
     
-    func renderCards(player: Player, deck: Deck) {
+    func renderCards(player: Player) {
         let verticalOffset = 200 * player.number
         
         cardNodes = cardNodes.filter { (cardNode) -> Bool in
@@ -36,12 +44,14 @@ class BoardScene: SKScene {
             return true
         }
         
+        let playerLabel = playerLabels[player.number - 1]
+        playerLabel.text = "\(player.name)'s Hand (\(player.health))"
+        
         var index = 0;
-        for card in deck.cards {
+        for card in player.handcards {
             let cardNode = CardNode(player: player, card: card)
-            cardNode.horizontalAlignmentMode = .Left;
             cardNodes.append(cardNode)
-            cardNode.position = CGPoint(x: 30 * index, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
+            cardNode.position = CGPoint(x: (70 * index) + 50, y: Int(CGRectGetMaxY(self.frame)) - verticalOffset)
             
             self.addChild(cardNode)
             index++

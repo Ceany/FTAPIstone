@@ -75,7 +75,7 @@ class GameViewController: UIViewController, GameInterface {
     }
     
     func drawnCard(player: Player, card: Card) {
-        scene.renderCards(player, deck: player.deck)
+        scene.renderCards(player)
     }
     
     func playedCard(opponent: Player, cardPlayed: Card) {

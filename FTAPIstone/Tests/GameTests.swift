@@ -47,10 +47,10 @@ class InterfaceTest: GameInterface {
     }
     
     func startedTurn(player: Player) {
-        print("Starting Turn: \(player.name)")
+        print("Starting Turn: \(player.name) has \(player.handcards.count) cards")
     }
     func finishedTurn(player: Player) {
-        print("Finished Turn: \(player.name) with health \(player.health) and cards \(player.handcards)")
+        print("Finished Turn: \(player.name) with health \(player.health) and has \(player.handcards.count) cards")
     }
     
     func drawnCard(player: Player, card: Card) {

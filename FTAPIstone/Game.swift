@@ -115,6 +115,10 @@ extension Game {
         for card in cardsToPlay {
             try playCard(card)
         }
+        
+        for card in cardsToPlay {
+            activePlayer.handcards.removeAtIndex(activePlayer.handcards.indexOf(card)!)
+        }
     }
     
     private func chooseCardsAutomatically(var cards: [Card], mana: Int) -> [Card] {
