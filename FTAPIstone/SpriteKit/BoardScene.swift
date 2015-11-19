@@ -19,9 +19,13 @@ class BoardScene: SKScene {
         scoreNode.position = CGPointMake(10, 25)
         scoreNode.horizontalAlignmentMode = .Left;
         
-        playerLabels[0].position = CGPointMake(10, 350)
+        var verticalOffset = 120
+        
+        playerLabels[0].position = CGPointMake(10, CGRectGetMaxY(self.frame) - CGFloat(verticalOffset))
         playerLabels[0].horizontalAlignmentMode = .Left;
-        playerLabels[1].position = CGPointMake(10, 550)
+        
+        verticalOffset = 320
+        playerLabels[1].position = CGPointMake(10, CGRectGetMaxY(self.frame) - CGFloat(verticalOffset))
         playerLabels[1].horizontalAlignmentMode = .Left;
 
         addChild(playerLabels[0])
