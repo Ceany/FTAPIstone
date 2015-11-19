@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		143487F51BE141B400036C1D /* PlayerspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143487F41BE141B400036C1D /* PlayerspaceViewController.swift */; };
 		143487F71BE14DDE00036C1D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143487F61BE14DDE00036C1D /* GameViewController.swift */; };
 		1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD961BAB3E28009E4795 /* AppDelegate.swift */; };
 		1464DD991BAB3E28009E4795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DD981BAB3E28009E4795 /* ViewController.swift */; };
@@ -15,11 +14,14 @@
 		1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9D1BAB3E28009E4795 /* Assets.xcassets */; };
 		1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */; };
 		1464DDB71BAB3E28009E4795 /* FTAPIstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDB61BAB3E28009E4795 /* FTAPIstoneUITests.swift */; };
-		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; settings = {ASSET_TAGS = (); }; };
-		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; settings = {ASSET_TAGS = (); }; };
-		FA8B482B1BE14BDA0027AA7D /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B482A1BE14BDA0027AA7D /* GameTests.swift */; settings = {ASSET_TAGS = (); }; };
+		1464DDC51BAB3E43009E4795 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC41BAB3E43009E4795 /* Player.swift */; };
+		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; };
+		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; };
+		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; };
+		FA68A0271BFE49EA001C55D1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68A0231BFE4858001C55D1 /* SpriteKit.framework */; };
+		FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */; };
+		FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */; };
+		FA8B482B1BE14BDA0027AA7D /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B482A1BE14BDA0027AA7D /* GameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		143487F41BE141B400036C1D /* PlayerspaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerspaceViewController.swift; sourceTree = "<group>"; };
 		143487F61BE14DDE00036C1D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1464DD931BAB3E28009E4795 /* FTAPIstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTAPIstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1464DD961BAB3E28009E4795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +59,10 @@
 		1464DDC61BAB3E51009E4795 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1464DDC81BAB40BD009E4795 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1464DDCA1BAB417D009E4795 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		FA68A0231BFE4858001C55D1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		FA68A0251BFE485E001C55D1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardScene.swift; path = SpriteKit/BoardScene.swift; sourceTree = "<group>"; };
+		FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BoardScene.sks; path = SpriteKit/BoardScene.sks; sourceTree = "<group>"; };
 		FA8B482A1BE14BDA0027AA7D /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../FTAPIstone/Tests/GameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA68A0271BFE49EA001C55D1 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,8 @@
 		1464DD8A1BAB3E28009E4795 = {
 			isa = PBXGroup;
 			children = (
+				FA68A0251BFE485E001C55D1 /* GameKit.framework */,
+				FA68A0231BFE4858001C55D1 /* SpriteKit.framework */,
 				1464DD951BAB3E28009E4795 /* FTAPIstone */,
 				1464DDAA1BAB3E28009E4795 /* FTAPIstoneTests */,
 				1464DDB51BAB3E28009E4795 /* FTAPIstoneUITests */,
@@ -109,14 +117,11 @@
 		1464DD951BAB3E28009E4795 /* FTAPIstone */ = {
 			isa = PBXGroup;
 			children = (
+				FA68A04B1BFE4B56001C55D1 /* UI */,
+				FA68A04A1BFE4B45001C55D1 /* Logic */,
 				1464DD961BAB3E28009E4795 /* AppDelegate.swift */,
 				1464DD981BAB3E28009E4795 /* ViewController.swift */,
-				1464DDCA1BAB417D009E4795 /* Deck.swift */,
-				1464DDC81BAB40BD009E4795 /* Game.swift */,
-				1464DDC41BAB3E43009E4795 /* Player.swift */,
 				143487F61BE14DDE00036C1D /* GameViewController.swift */,
-				143487F41BE141B400036C1D /* PlayerspaceViewController.swift */,
-				1464DDC61BAB3E51009E4795 /* Card.swift */,
 				1464DD9A1BAB3E28009E4795 /* Main.storyboard */,
 				1464DD9D1BAB3E28009E4795 /* Assets.xcassets */,
 				1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */,
@@ -141,6 +146,26 @@
 				1464DDB81BAB3E28009E4795 /* Info.plist */,
 			);
 			path = FTAPIstoneUITests;
+			sourceTree = "<group>";
+		};
+		FA68A04A1BFE4B45001C55D1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1464DDCA1BAB417D009E4795 /* Deck.swift */,
+				1464DDC81BAB40BD009E4795 /* Game.swift */,
+				1464DDC41BAB3E43009E4795 /* Player.swift */,
+				1464DDC61BAB3E51009E4795 /* Card.swift */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		FA68A04B1BFE4B56001C55D1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */,
+				FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +235,7 @@
 				TargetAttributes = {
 					1464DD921BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = FAJ4EZ9ZDP;
 					};
 					1464DDA61BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
@@ -249,6 +275,7 @@
 				1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */,
 				1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */,
 				1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */,
+				FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +306,8 @@
 				1464DDC51BAB3E43009E4795 /* Player.swift in Sources */,
 				143487F71BE14DDE00036C1D /* GameViewController.swift in Sources */,
 				1464DD971BAB3E28009E4795 /* AppDelegate.swift in Sources */,
+				FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */,
 				1464DDC71BAB3E51009E4795 /* Card.swift in Sources */,
-				143487F51BE141B400036C1D /* PlayerspaceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +447,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -431,10 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TiloBox.FTAPIstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

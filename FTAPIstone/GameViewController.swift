@@ -7,48 +7,35 @@
 //
 
 import UIKit
+import SpriteKit
 
-class GameViewController: UIViewController, PlayerspaceDataProvider, GameInterface {
-    @IBOutlet weak var roundLabel: UILabel!
-    var playerSpace1Initialized = false
-    var playerSpace1: PlayerspaceViewController?
-    var playerSpace2: PlayerspaceViewController?
+class GameViewController: UIViewController, GameInterface {
+    
     var game: Game?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.destinationViewController.isKindOfClass(PlayerspaceViewController) {
-            if playerSpace1 == nil {
-                if let vc = segue.destinationViewController as? PlayerspaceViewController {
-                    playerSpace1 = vc
-                    playerSpace1?.dataProvider = self
-                }
-            } else {
-                if let vc = segue.destinationViewController as? PlayerspaceViewController {
-                    playerSpace2 = vc
-                    playerSpace2?.dataProvider = self
-                }
-            }
+        
+        if let scene = BoardScene(fileNamed:"BoardScene") {
+            // Configure the view.
+            let skView = self.view as! SKView
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+            
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .AspectFill
+            
+            skView.presentScene(scene)
         }
     }
     
-    func requestForData(playerspaceVC: PlayerspaceViewController) {
-        if !playerSpace1Initialized {
-            playerSpace1Initialized = true
-        } else {
-            setupGame()
-        }
-    }
-
+    
     
     func setupGame() {
         game = Game(interface: self, player1Name: "Maxi", player2Name: "Alex")
-        playerSpace1?.player = game?.player1
-        playerSpace2?.player = game?.player2
         
         doTurn()
     }
@@ -68,12 +55,11 @@ class GameViewController: UIViewController, PlayerspaceDataProvider, GameInterfa
     }
     
     func startedTurn(player: Player) {
-        roundLabel.text = "Round: \(game?.round)"
+
     }
     
     func finishedTurn(player: Player) {
-        playerSpace1?.updatePlayer()
-        playerSpace2?.updatePlayer()
+ 
     }
     
     func drawnCard(player: Player, card: Card) {
@@ -85,7 +71,7 @@ class GameViewController: UIViewController, PlayerspaceDataProvider, GameInterfa
     }
     
     func gameFinished(winner: Player, loser: Player) {
-        roundLabel.text = "\(winner.name) won the game! \(loser.name) is a friggin loser!"
+
     }
     
 }
