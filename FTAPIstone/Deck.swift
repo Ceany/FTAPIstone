@@ -12,7 +12,29 @@ public struct Deck {
     var cards: [Card]
     
     init(){
-        self.cards = [Card(manaCosts: 0),Card(manaCosts: 0),Card(manaCosts: 1),Card(manaCosts: 1),Card(manaCosts: 2),Card(manaCosts: 2),Card(manaCosts: 2),Card(manaCosts: 3),Card(manaCosts: 3),Card(manaCosts: 3),Card(manaCosts: 3),Card(manaCosts: 4),Card(manaCosts: 4),Card(manaCosts: 5),Card(manaCosts: 5),Card(manaCosts: 6),Card(manaCosts: 6),Card(manaCosts:7),Card(manaCosts: 8)]
+        cards = []
+        
+        do {
+            if let cardsPath = NSBundle.mainBundle().pathForResource("cards", ofType: "json") {
+                if let cardsData = NSData(contentsOfFile: cardsPath) {
+                    
+                    if  let cardsJSON: AnyObject = try NSJSONSerialization.JSONObjectWithData(cardsData, options:NSJSONReadingOptions.MutableContainers) {
+                        if let cardsArray: NSArray = cardsJSON["cards"] as NSArray {
+                            for card in cardsArray as! [NSDictionary]{
+                                cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
+                                cards.append(Card(manaCosts: card.valueForKey("manaCosts") as! Int, health: card.valueForKey("health") as! Int, attack: card.valueForKey("attack") as! Int, identifier: card.valueForKey("identifier") as! Int))
+                            }
+                        }
+                    }
+                    
+                    
+                }
+            }
+            
+        } catch let error as NSError {
+           print(error)
+        }
+        
     }
     
     mutating func drawCard() -> Card {

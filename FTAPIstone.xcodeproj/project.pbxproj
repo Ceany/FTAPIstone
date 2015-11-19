@@ -18,6 +18,7 @@
 		1464DDC71BAB3E51009E4795 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC61BAB3E51009E4795 /* Card.swift */; };
 		1464DDC91BAB40BD009E4795 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDC81BAB40BD009E4795 /* Game.swift */; };
 		1464DDCB1BAB417D009E4795 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464DDCA1BAB417D009E4795 /* Deck.swift */; };
+		1486A5041BFE515000B6086D /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 1486A5031BFE515000B6086D /* cards.json */; };
 		FA68A0271BFE49EA001C55D1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68A0231BFE4858001C55D1 /* SpriteKit.framework */; };
 		FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */; };
 		FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */; };
@@ -60,6 +61,7 @@
 		1464DDC61BAB3E51009E4795 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1464DDC81BAB40BD009E4795 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1464DDCA1BAB417D009E4795 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		1486A5031BFE515000B6086D /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		FA68A0231BFE4858001C55D1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		FA68A0251BFE485E001C55D1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardScene.swift; path = SpriteKit/BoardScene.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				1464DD981BAB3E28009E4795 /* ViewController.swift */,
 				143487F61BE14DDE00036C1D /* GameViewController.swift */,
 				1464DD9A1BAB3E28009E4795 /* Main.storyboard */,
+				1486A5031BFE515000B6086D /* cards.json */,
 				1464DD9D1BAB3E28009E4795 /* Assets.xcassets */,
 				1464DD9F1BAB3E28009E4795 /* LaunchScreen.storyboard */,
 				1464DDA21BAB3E28009E4795 /* Info.plist */,
@@ -238,7 +241,7 @@
 				TargetAttributes = {
 					1464DD921BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = FAJ4EZ9ZDP;
+						DevelopmentTeam = 6789VXKE2K;
 					};
 					1464DDA61BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
@@ -278,6 +281,7 @@
 				1464DDA11BAB3E28009E4795 /* LaunchScreen.storyboard in Resources */,
 				1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */,
 				1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */,
+				1486A5041BFE515000B6086D /* cards.json in Resources */,
 				FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
