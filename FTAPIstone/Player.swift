@@ -26,7 +26,11 @@ public class Player : Equatable {
     init(name: String){
         self.name = name
         deck = Deck()
-        handcards = deck.drawCards(3)
+        do {
+            handcards = try deck.drawCards(2)
+        } catch {
+            handcards = [Card]()
+        }
         number = playerNumber
         playerNumber++
     }

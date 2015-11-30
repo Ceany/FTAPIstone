@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum DeckErrors : ErrorType {
+    case Empty
+}
+
 public struct Deck {
     var cards: [Card]
     
@@ -37,18 +41,22 @@ public struct Deck {
         
     }
     
-    mutating func drawCard() -> Card {
-        let position = Int(arc4random_uniform(UInt32(cards.count-1)))
+    mutating func drawCard() throws -> Card {
+        guard cards.count > 0 else {
+            throw DeckErrors.Empty
+        }
+        
+        let position = cards.count > 1 ? Int(arc4random_uniform(UInt32(cards.count-1))) : 0
         
         let cardDrawn = self.cards.removeAtIndex(position)
     
         return cardDrawn
     }
     
-    mutating func drawCards(number:Int) -> [Card] {
+    mutating func drawCards(number:Int) throws -> [Card] {
         var cardsDrawn = [Card]()
         for _ in 1...number {
-            cardsDrawn.append(drawCard())
+            try cardsDrawn.append(drawCard())
         }
         return cardsDrawn
     }

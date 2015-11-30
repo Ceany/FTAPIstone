@@ -21,7 +21,6 @@
 		1486A5041BFE515000B6086D /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 1486A5031BFE515000B6086D /* cards.json */; };
 		FA68A0271BFE49EA001C55D1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA68A0231BFE4858001C55D1 /* SpriteKit.framework */; };
 		FA68A04D1BFE4B79001C55D1 /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */; };
-		FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */; };
 		FA8B482B1BE14BDA0027AA7D /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B482A1BE14BDA0027AA7D /* GameTests.swift */; };
 		FAE3DC6D1BFE617A0034BAC2 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +64,6 @@
 		FA68A0231BFE4858001C55D1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		FA68A0251BFE485E001C55D1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardScene.swift; path = SpriteKit/BoardScene.swift; sourceTree = "<group>"; };
-		FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BoardScene.sks; path = SpriteKit/BoardScene.sks; sourceTree = "<group>"; };
 		FA8B482A1BE14BDA0027AA7D /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../FTAPIstone/Tests/GameTests.swift; sourceTree = "<group>"; };
 		FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardNode.swift; path = SpriteKit/CardNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				FA68A04C1BFE4B79001C55D1 /* BoardScene.swift */,
-				FA68A0501BFE4C4C001C55D1 /* BoardScene.sks */,
 				FAE3DC6C1BFE617A0034BAC2 /* CardNode.swift */,
 			);
 			name = UI;
@@ -282,7 +279,6 @@
 				1464DD9E1BAB3E28009E4795 /* Assets.xcassets in Resources */,
 				1464DD9C1BAB3E28009E4795 /* Main.storyboard in Resources */,
 				1486A5041BFE515000B6086D /* cards.json in Resources */,
-				FA68A0511BFE4C4C001C55D1 /* BoardScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

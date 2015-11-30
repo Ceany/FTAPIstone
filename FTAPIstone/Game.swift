@@ -20,6 +20,7 @@ protocol GameInterface {
 
 enum GameError: ErrorType {
     case CardNotInHand
+    case GameFinished
 }
 
 
@@ -49,20 +50,23 @@ public class Game {
         players = [Player(name: player1Name), Player(name: player2Name)]
     }
     
-    public func drawCard() -> Card {
-        let drawnCard = activePlayer.deck.drawCard()
+    public func drawCard() throws -> Card  {
+        let drawnCard = try activePlayer.deck.drawCard()
         activePlayer.handcards.append(drawnCard)
         
         return drawnCard
     }
     
-    public func startTurn() {
+    public func startTurn() throws {
+        guard !gameFinished else {
+            throw GameError.GameFinished
+        }
         round++
         
         interface?.startedTurn(activePlayer)
         activePlayer.mana = activePlayer.manaslots
         
-        let drawnCard = drawCard()
+        let drawnCard = try drawCard()
         interface?.drawnCard(activePlayer, card: drawnCard)
     }
     
@@ -104,7 +108,7 @@ extension Game {
     }
     
     public func playTurnAutomatically() throws {
-        startTurn()
+        try startTurn()
         
         defer {
             finishTurn()

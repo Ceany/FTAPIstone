@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController, GameInterface {
+class GameViewController: UIViewController, UserInteraction {
     
     var game: Game?
     var player1Name: String = ""
@@ -20,11 +20,9 @@ class GameViewController: UIViewController, GameInterface {
         let skView = self.view as! SKView
         
         scene = BoardScene(size: skView.bounds.size)
-        setupGame()
-        
-        if let game = self.game {
-            scene.game = game
-        }
+        scene.userInteractionDelegate = self
+        self.game = Game(interface: scene, player1Name: "Maxi", player2Name: "Alex")
+        doTurn()
         
         // Configure the view.
         skView.showsFPS = true
@@ -37,17 +35,6 @@ class GameViewController: UIViewController, GameInterface {
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
-        
-        
-        
-    }
-    
-    
-    
-    func setupGame() {
-        game = Game(interface: self, player1Name: "Maxi", player2Name: "Alex")
-        
-        doTurn()
     }
     
     func doTurn() {
@@ -57,33 +44,15 @@ class GameViewController: UIViewController, GameInterface {
             print("Oh noes!")
         }
         
-        if let game = game {
-            if !game.gameFinished {
-                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("doTurn"), userInfo: nil, repeats: false)
-            }
-        }
+//        if let game = game {
+//            if !game.gameFinished {
+//                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("doTurn"), userInfo: nil, repeats: false)
+//            }
+//        }
     }
     
-    func startedTurn(player: Player) {
-        if player1Name == "" {
-            player1Name = player.name
-        }
-    }
-    
-    func finishedTurn(player: Player) {
-        
-    }
-    
-    func drawnCard(player: Player, card: Card) {
-        scene.renderCards(player)
-    }
-    
-    func playedCard(opponent: Player, cardPlayed: Card) {
-        scene.renderScore("\(opponent.name) was dealt \(cardPlayed.attack) damage!")
-    }
-    
-    func gameFinished(winner: Player, loser: Player) {
-        scene.renderScore("Game finished and \(winner.name) won!")
+    func didTouchPlay() {
+        doTurn()
     }
     
 }
