@@ -241,7 +241,7 @@
 				TargetAttributes = {
 					1464DD921BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = FAJ4EZ9ZDP;
+						DevelopmentTeam = 84G73GMHBW;
 					};
 					1464DDA61BAB3E28009E4795 = {
 						CreatedOnToolsVersion = 7.0;
@@ -459,7 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.FTAPIstone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.Hearthtapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -473,7 +473,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FTAPIstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.FTAPIstone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.cool.guy.Hearthtapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
